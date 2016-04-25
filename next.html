@@ -5,236 +5,7 @@
 <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="lib/font-awesome-4.6.1/css/font-awesome.min.css">
 <link href="lib/lightbox2-master/dist/css/lightbox.css" rel="stylesheet">
-<style type="text/css">
-  .imgcenter {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .center {
-    margin-top: 0;
-    margin-left: auto;
-    margin-right: auto;
-    width: 200px;
-  }
-
-  a {
-    font-family: "Roboto";
-    font-weight: 300;
-    text-decoration: none;
-    color: #00A323;
-  }
-
-  a:hover {
-    color: gray;
-  }
-
-  .whitelinks a{
-      font-family: "Roboto";
-      font-weight: 300;
-      text-decoration: none;
-      color: white;
-  }
-  .whitelinks a:hover{
-    color: #DDD;
-  }
-
-  h1 {
-    font-size: 300%;
-    margin: 0;
-  }
-  h2,h3,h4 {
-    margin: 0;
-  }
-
-  html,
-  body {
-    min-height: 100% !important;
-    height: 100%;
-    margin: 0;
-  }
-
-  .panel {
-    height: 100%;
-    width: 100%;
-    font-family: "Rokkitt";
-    font-size: 250%;
-    margin-bottom: 400px;
-  }
-
-  .panel.green {
-
-    background-color: #B7DCAF;
-  }
-
-  .blue {
-    background-color: #3883d8;
-  }
-
-  .turqoise {
-    background-color: #38ced7;
-  }
-
-  .brown {
-    background-color: #a66f28;
-  }
-
-  .salmon {
-    background-color: #F58B7C;
-  }
-
-  .skin {
-    background-color: #FCD19F;
-  }
-
-  .black {
-    background-color: #000000;
-  }
-
-  .white {
-    background-color: #FFFFFF;
-  }
-
-  .red {
-    background-color: #cf3535;
-  }
-
-  .green {
-    background-color: #B7DCAF;
-  }
-
-  .orange {
-    background-color: #ea6300;
-  }
-
-  .grey {
-    background-color: #5F666D;
-  }
-
-  .sand {
-    background-color: #DBCCBE;
-  }
-
-  .emerald {
-    background-color: #088A73;
-  }
-
-  .chalkboard {
-    background-color: #4D8161;
-  }
-
-  .light {
-    background-color: #F6F7F8;
-  }
-
-  .eggshell {
-    background-color: rgb(239, 239, 239);
-  }
-
-  .standard {
-    padding: 10%;
-    color: white;
-  }
-
-  .dark {
-    padding: 10%;
-    color: black;
-  }
-
-  .city {
-    background-image: url('img/sophal_street.png');
-    background-size: cover;
-  }
-
-  .sandals {
-    background-image: url('img/sophal_sandals.png');
-    background-size: cover;
-  }
-
-  .education {
-    background-image: url('img/sophal_education.png');
-    background-size: cover;
-  }
-  .dot{
-    width: 1.2rem;
-    height: 1.2rem;
-    border-radius: 1.2rem;
-    display: inline-block;
-    margin: .1rem;
-  }
-  .row{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0px;
-    font-size: 0px;
-    width: 100%;
-  }
-  .dotblue{
-    background-color: #0951A1;
-    color: #0951A1;
-  }
-  .dotorange{
-    background-color: #FFAE32;
-    color: #FFAE32;
-  }
-  .dotyellow{
-    background-color: #FFD132;
-    color: #FFD132;
-  }
-  .dotpurple{
-    background-color: #5143DD;
-    color: #5143DD;
-  }
-  #popgrowth{
-    display: inline-block;
-  }
-  .notdot{
-    background-color: transparent;
-  }
-  td{
-    padding: .25em;
-  }
-  input{
-    border: none;
-    border-bottom: 1px black solid;
-    font-family: "Rokkitt";
-    font-size: 100%;
-  }
-  #amt{
-    width: 4em;
-    text-align: center;
-  }
-  #names{
-    width: 8em;
-  }
-  #city{
-    width: 12em;
-  }
-  #street{
-    width: 16em;
-  }
-  #zip{
-    width: 5em;
-  }
-  #state{
-    width: 2em;
-  }
-  #cc{
-    width: 16em;
-  }
-  #cvc{
-    width: 4em;
-  }
-  button{
-    font-family: "Rokkitt";
-    font-size: 100%;
-    border: none;
-    background-color: #00A323;
-    color: white;
-  }
-</style>
+<link rel="stylesheet" href="css/basic.css" type="text/css">
 
 <body>
 
@@ -266,7 +37,7 @@
   <section class="panel chalkboard">
     <div class="standard">
   <p>What is it going to take to finish this dream and make a new future a reality for Sophal and kids like him?</p>
-<table style="font-size: xx-large">
+<table>
   <tr><td>Elementary School</td><td>$100,000 final property payment due June 2016</td></tr>
   <tr><td>Air Conditioners</td><td>$30,000 for Elementary School building</td></tr>
   <tr><td>Furnishings</td><td>$52,000 - classrooms; library; office; and training facility</td></tr>
@@ -289,6 +60,7 @@
     <div class="dark">
       <img src="img/AHIS.png" class="imgcenter"><br/>
       <div style="text-align: center">
+      <form>
         <label>I'm donating $</label>
         <input type="text"/ name="amt" id="amt" ></input> towards the new campus.
 
@@ -318,7 +90,7 @@
 
         </div>
         <div style="text-align:center; margin-top: .1em;"><button>Donate</button></div>
-
+      </form>
       </div>
     </div>
   </section>

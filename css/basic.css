@@ -1,6 +1,60 @@
-/*
-	Demo Styles: NOT REQUIRED
-*/
+@media (min-width: 330px) {
+  h1 {
+    font-size: 6vh;
+    margin: 0;
+  }
+
+  .standard {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0% 10% 0% 10%;
+    color: white;
+    border: 10px solid white;
+    margin-left: 10%;
+    margin-right: 10%;
+    z-index: 99;
+    background-color:inherit;
+    min-width: 50vw;
+  }
+  .block-left{
+    position: relative;
+    transform: none;
+    border: none;
+    display: inline-block;
+
+  }
+  .block-right{
+      position: relative;
+      transform: none;
+      border: none;
+      display: inline-block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%
+  }
+
+  .timeline{
+    border-right: 10px solid white;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100%;
+    float: left;
+    position: absolute;
+    left: 50%;
+    z-index: 1;
+  }
+
+  .timelinekiller{
+    width: 100%;
+    height: 50%;
+    float: left;
+    position: absolute;
+    z-index: 2;
+    background-color: inherit;
+  }
+
+}
 .imgcenter {
   display: block;
   margin-left: auto;
@@ -35,10 +89,7 @@ a:hover {
   color: #DDD;
 }
 
-h1 {
-  font-size: 10vh;
-  margin: 0;
-}
+
 h2,h3,h4 {
   margin: 0;
 }
@@ -54,7 +105,7 @@ body {
   height: 100%;
   width: 100%;
   font-family: "Rokkitt";
-  font-size: 4vh;
+  font-size: 3.0vh;
   margin-bottom: 400px;
 }
 
@@ -125,11 +176,6 @@ body {
 
 .eggshell {
   background-color: rgb(239, 239, 239);
-}
-
-.standard {
-  padding: 10%;
-  color: white;
 }
 
 .dark {
@@ -235,4 +281,81 @@ table{
 }
 form{
   font-size: 3vh;
+}
+@media (min-width: 800px) {
+  h1 {
+    font-size: 8vh;
+    margin: 0;
+  }
+  .standard{
+    padding: 0% 10% 0% 10%;
+    color: white;
+    z-index: 99;
+    border: none;
+  }
+
+  .block-center {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0% 10% 0% 10%;
+    border: 10px solid white;
+    margin-left: 10%;
+    margin-right: 10%;
+    z-index: 99;
+    background-color:inherit;
+    min-width: 50vw;
+  }
+
+  .block-right {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(50%,-50%);
+    border: none;
+    padding: 0% 10% 0% 10%;
+    color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    z-index: 99;
+    background-color: transparent;
+    min-width:0;
+    margin-left: 1em;
+    margin-right: 0;
+    width: auto;
+
+  }
+
+  .block-left {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-100%,-50%);
+    border: none;
+    padding: 0% 10% 0% 10%;
+    color: white;
+    margin-left: 10%;
+    margin-right: 10%;
+    z-index: 99;
+    background-color: transparent;
+    min-width:0;
+    margin-left: 1em;
+    margin-right: 0;
+  }
+  .pokie-right{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2%;
+    background-color: white;
+    height: .5em;
+  }
+  .pokie-left{
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    width: 2%;
+    background-color: white;
+    height: .5em;
+  }
 }

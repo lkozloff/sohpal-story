@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link href='http://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="lib/font-awesome-4.6.1/css/font-awesome.min.css">
@@ -9,47 +10,80 @@
 
 <body>
 
+  <section class="panel red">
+    <div class="timelinekiller"></div>
+    <div class="timeline"></div>
+    <div class="standard block-center">
+      <h1 style="text-align: center; margin: .5em;">The Road Ahead</h1>
+    </div>
+  </section>
+
   <section class="panel blue">
-    <div class="standard">
-      <h1 style="text-align: center;">The Road Ahead</h1>
-      <p> Asian Hope International School opened in January 2010 with only 17 middle and low income students.  Now we have 320 children enrolled.</p>
-      <p>That is a 1,770% increase in just 6 years.</p>
+      <div class="timeline"></div>
+      <div class="pokie-left"></div>
+      <div class="standard">
+      <div class="block-left">
+        <p> Asian Hope International School opened in January 2010 with only 17 middle and low income students.  Now we have 320 children enrolled.</p>
+        <p>That is a 1,770% increase in just 6 years.</p>
+
+    </div>
+    <div class="block-right" style="padding: 0; margin; 0;">
       <h4>School Population Growth by Year</h4>
       <div id="popgrowth" class="imgcenter"></div><div id="stats"><h3>Ended 2010 with 38 students</h3></div>
     </div>
   </section>
-  <section class="panel red">
+  <section class="panel turqoise">
+    <div class="timeline"></div>
+    <div class="pokie-right"></div>
+
     <div class="standard">
-      <p>AHIS is the best place for Cambodian children to get educated.  The demand for seats at our schools is higher than ever.  Our bilingual and bi-curricular program is unique and cutting edge where the students gain professional English (the business language of the world) and professional Khmer (the national language of Cambodia).</p>
-      <p>Our teachers use a blend of the Cambodian National Curriculum and the British National Curriculum.</p>
-      <p>There is no other program of this breadth, depth, and quality in Cambodia.</p>
+      <div class="block-left">
+        <img class="imgcenter" src="img/flags.png"/ style="width: 30vw;">
+      </div>
+      <div class="block-right">
+        <p>AHIS is the best place for Cambodian children to get educated.  The demand for seats at our schools is higher than ever.  Our bilingual and bi-curricular program is unique and cutting edge where the students gain professional English (the business language of the world) and professional Khmer (the national language of Cambodia).</p>
+        <p>Our teachers use a blend of the Cambodian National Curriculum and the British National Curriculum.</p>
+        <p>There is no other program of this breadth, depth, and quality in Cambodia.</p>
 
 
     </div>
   </section>
 
   <section class="panel chalkboard">
+    <div class="timeline"></div>
+    <div class="pokie-left"></div>
     <div class="standard">
-      <p>We offer qualified foreign and national teachers whose faith and compassion compel their engagement with the students.  Our foreign teachers come because they have a heart for the Cambodian children and a calling to bringing the love of Jesus to these families.  Our top-notch Cambodian teachers are raised up internally from the Asian Hope Teacher Training Program.	</p>
-      <p>Last year our Grade 6 students took the Cambodian National Exam.</p>
-      <p>Every student passed the exam.</p>
-      <p>The lowest score was 80%!</p>
+        <div class="block-left">
+          <p>We offer qualified foreign and national teachers whose faith and compassion compel their engagement with the students.  Our foreign teachers come because they have a heart for the Cambodian children and a calling to bringing the love of Jesus to these families.  Our top-notch Cambodian teachers are raised up internally from the Asian Hope Teacher Training Program.	</p>
+          <p>Last year our Grade 6 students took the Cambodian National Exam.</p>
+          <p>Every student passed the exam.</p>
+          <p>The lowest score was 80%!</p>
+        </div>
+        <div class="block-right">
+          <img class="imgcenter" src="img/compassion.png"/ style="width:20vw">
+        </div>
 
 
     </div>
   </section>
   <section class="panel orange">
+    <div class="timeline"></div>
+    <div class="pokie-right"></div>
     <div class="standard">
+      <div class="block-left">
+        <img class="imgcenter" src="img/globe.png"/ style="width: 20vw;">
+      </div>
+      <div class="block-right">
       <p>Our classes are taught from a Christian worldview by native English and Khmer speakers to help the children appreciate and retain their own culture, while being prepared to take their place in the competitive world marketplace.</p>
       <p>Asian Hope International School is financially self-sustaining.  It does not depend on donations to continue its work.  It earns the necessary revenue to meet the mission, cover the operational needs, and provide place for our free Catch Up School in our community.</p>
-
-
+      </div>
     </div>
   </section>
 
   <section class="panel blue">
-    <div class="standard">
-    <p>We have the curriculum and the faculty.  We just need space to expand the vision.</p>
+    <div class="timeline"></div>
+    <div class="standard block-center">
+    <p style="text-align: center;">We have the curriculum and the faculty.  We just need space to expand the vision.</p>
     <p style="text-align: center;">We just need our own facility.</p>
       <a href="img/AHISRender.jpg" data-lightbox="newcampus" data-title="New Campus Render"><img class="imgcenter" src="img/AHISRender.jpg" style="width:100%;"/></a>
     <p class="whitelinks" style="text-align:center">
@@ -58,12 +92,13 @@
 
 
     </div>
+        <div class="timelinekiller top"></div>
   </section>
 
 e
   <section class="panel white">
     <div class="dark">
-      <img src="img/AHIS.png" class="imgcenter">
+      <img src="img/AHIS.png" class="imgcenter" style="max-width:100%;">
 
       <div style="text-align:center;">
         <p>
@@ -282,9 +317,9 @@ e
         }
       }
     // add all the labels
-    var newrow = $('<p style="margin:0"></p>')
+    var newrow = $('<p class="yearlabel"></p>')
     for(i=0; i<yearmap.length; i++){
-      newrow.append('<strong class="notdot '+colormap[i]+' '+yearmap[i]+'">'+yearmap[i].slice(1,5)+'&nbsp;&nbsp;&nbsp;&nbsp;</strong>');
+      newrow.append('<strong class="notdot '+colormap[i]+' '+yearmap[i]+'">'+yearmap[i].slice(1,5)+'&nbsp;&nbsp;</strong>');
     }
     $('#popgrowth').append(newrow)
 

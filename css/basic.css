@@ -58,6 +58,18 @@
     background-color: inherit;
   }
 
+  .dot{
+    width: 1.2vw;
+    height: 1.2vw;
+    border-radius: 1.3vw;
+    display: inline-block;
+    margin: .05rem;
+  }
+  .yearlabel{
+    margin:0;
+    font-size: 3.0vw;
+  }
+
 }
 .imgcenter {
   display: block;
@@ -111,6 +123,7 @@ body {
   font-family: "Rokkitt";
   font-size: 2.9vh;
   margin-bottom: 400px;
+  line-height: 90%;
 }
 
 .panel.green {
@@ -201,13 +214,7 @@ body {
   background-image: url('/img/sophal_education.png');
   background-size: cover;
 }
-.dot{
-  width: 1.2rem;
-  height: 1.2rem;
-  border-radius: 1.2rem;
-  display: inline-block;
-  margin: .1rem;
-}
+
 .row{
   display: block;
   margin-left: auto;
@@ -234,6 +241,7 @@ body {
 }
 #popgrowth{
   display: inline-block;
+  line-height: normal;
 }
 .notdot{
   background-color: transparent;
@@ -285,6 +293,9 @@ table{
 }
 form{
   font-size: 3vh;
+}
+.top{
+  top: 50%;
 }
 @media (min-width: 800px) {
   h1 {
@@ -362,5 +373,16 @@ form{
     width: 2%;
     background-color: white;
     height: .5em;
+  }
+  .dot{
+    width: .8vw;
+    height: .8vw;
+    border-radius: .8vw;
+    display: inline-block;
+    margin: .05rem;
+  }
+  .yearlabel{
+    margin:0;
+    font-size: 2.0vw;
   }
 }

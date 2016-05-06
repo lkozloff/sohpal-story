@@ -91,13 +91,25 @@
 
       <div id="donate_form" style="">
         <form action="https://www.asianhope.org/ahis-new-campus/" method="GET">
-        <label for "amt">I'll donate<br/>$</label><input type="text" id="amt" name="AMT"></input><br/><br/>
-        <button type="submit" >Give by <i class="fa fa-credit-card"></i></button>
+          <label for "amt">I'll donate<br/>$</label><input type="text" id="amt" name="AMT"></input><br/><br/>
+          <button type="submit" >Give by <i class="fa fa-credit-card"></i></button>
+        </form>
       </div>
 
       <div id="contact_form" style="">
-        <label for "email">But I want to keep in touch: </label><input type="email" id="email" name="email" placeholder="Here's my email."></input><br/><br/>
-        <button>Submit</button>
+
+        <!--[if lte IE 8]>
+        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+        <![endif]-->
+        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+        <script>
+          hbspt.forms.create({
+            css: '',
+            portalId: '2039092',
+            formId: '896060d2-502f-4212-afe9-a9ac9bd5a165'
+          });
+       </script>
+
       </div>
 
 
@@ -179,6 +191,16 @@
     });
 
   </script>
+  <!-- Start of Async HubSpot Analytics Code -->
+  <script type="text/javascript">
+    (function(d,s,i,r) {
+      if (d.getElementById(i)){return;}
+      var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+      n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/2039092.js';
+      e.parentNode.insertBefore(n, e);
+    })(document,"script","hs-analytics",300000);
+  </script>
+<!-- End of Async HubSpot Analytics Code -->
 </body>
 
 </html>

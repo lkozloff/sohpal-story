@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <link href='http://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="lib/font-awesome-4.6.1/css/font-awesome.min.css">
@@ -9,11 +9,7 @@
 <link rel="stylesheet" href="css/basic.css" type="text/css">
 <link rel="stylesheet" type="text/css" href="lib/jquerysvg/jquery.svg.css">
 <style>
-.randommoto{
-  height: 100px;
-  width: 100px;
-}
-.randomcar{
+.randommoto,.randomcar,.randomsandal{
   height: 100px;
   width: 100px;
 }
@@ -66,6 +62,41 @@
     animation-iteration-count: infinite;
     transform: rotateY(180deg);
 }
+#sophal-sleeping{
+  margin-left:auto;
+  margin-right:auto;
+  width: 188px;
+}
+#sophal-noodles{
+  margin-left:auto;
+  margin-right:auto;
+  width: 350px;
+}
+#eyes_open{
+  animation-name: eyes;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+#eyes_closed{
+  animation-name: eyelids;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+#moto_town{
+  overflow-x: hidden;
+  width: 100%;
+}
+#sandal_town{
+  width: 100%
+}
+.sandal{  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 200vw;
+  animation-name: sandal;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  z-index: 5;}
 @keyframes left {
     from {}
     to {transform: translateX(-220vw);}
@@ -74,9 +105,41 @@
     from {}
     to {transform: translateX(220vw) rotateY(180deg);}
 }
+@keyframes eyes {
+  from {display: none;}
+  to {display: inline;}
+}
+@keyframes eyelids {
+  from {display: inline;}
+  to {display: none;}
+}
+@keyframes sandal{
+  30%{transform: translateX(-170vw) rotateZ(-360deg);}
+  50%{transform: translateX(-170vw) rotateZ(-360deg);}
+  75%{transform: translateX(-220vw) rotateZ(720deg);}
+  100%{transform: translateX(-250vw); }
+
+}
+
+
 </style>
 <body>
-    <section class="panel blue">
+  <section class="panel grey">
+    <div class="standard">
+      <h1 style="text-align:center; line-height: 75%;">Sophal's Story</h1>
+      <p>Rubbing the sleep from his eyes, Sophal stands up from his foam mat and stretches long and tall. It was a typical night sleep - fitful due to the heat, dogs barking and street noises.</p>
+      <div id="sophal-sleeping" class="imgcenter"></div>
+    </div>
+  </section>
+  <section class="panel skin" style="background-color:#678D9F;">
+    <div class="standard">
+      <p>He makes his way to that familiar spot on the floor where his grandmother hands him a bowl of noodle soup with a small piece of pork in it. He quickly slurps down the broth, pulls on a dingy white uniform shirt, slips on his flip flops, and begins the dusty walk to school.</p>
+      <img src='img/sophal-noodles.gif' class="imgcenter" style="width: 40vw; max-width: 33%;"/>
+      <!-- <div id="sophal-noodles" class="imgcenter"/> -->
+    </div>
+  </section>
+
+    <section class="panel blue" style="overflow-x: hidden;">
       <div class="standard">
       <img class="imgcenter" src="img/sophal_export.png"/ style="height: 10vh; z-index:5;">
       <p>The streets are an obstacle course of trucks, motorcycles, bicycles, cows, dogs, and kids. Boy, he wishes he could buy some of the grilled pork and rice from his favorite food cart.</p>
@@ -89,27 +152,89 @@
     </div>
   </section>
 
-  <section class="panel red">
-        <div class="timeline"></div>
-            <div class="pokie-left"></div>
+  <section class="panel green" style="overflow-x: hidden;">
     <div class="standard">
-      <div class="block-left">
-    <p>Every year Asian Hope International School adds an additional class.  This has allowed us to grow in a very steady and planned manner.  But we are now at the end of our facility capacity.  We can’t fit another child in our current buildings.</p>
-    <p>The timing of our new campus completion is perfect.</p>
-    </div>
-    <div class = "block-right">
-    <div class = "moto1" style="width:100%">
+      <p>Sophal likes to get to school early. There is no playground on the campus of dirt and trash. He and his buddies play gambling games. Today is the sandal game but no money is involved. They need their money for the teacher.</p>
+      <div id="sandal_town">
 
+      </div>
     </div>
-    <div class = "moto2" style="width:100%">
+  </section>
+  <section class="panel salmon">
+    <div class="standard">
+      <p>School is only 4 hours a day 6 days a week. There are so many kids and so few teachers that the school day is split into morning and afternoon cohorts. Sophal wonders if he should just quit and find work to help his family. After all he is 11 years
+      old and still in second grade. Plus he hates his teacher who slaps him.</p>
+      <img src="img/sophal_clock.png"/ class="imgcenter">
+    </div>
+  </section>
 
-    </div>
-    <div class = "moto3" style="width:100%">
+  <section class="panel sand">
+      <div class="standard">
+        <p>The teacher demands money from students every day.  If Sophal doesn’t pay up  the teacher won’t teach him everything he needs to know in order to advance.  He doesn’t know if it even matters that the teacher doesn’t show up half of the time.</p>
+        <img src="img/sophal_bribes.png"/ class="imgcenter">
+      </div>
+  </section>
 
-    </div>
-  </div>
-  </div>
-</section>
+
+  <section class="panel emerald">
+      <div class="standard">
+        <p>Sophal’s older brother who became a Buddhist monk in order to get some semblance of an education says that Sophal should be grateful to even have a school to attend.  But his parents know how important education is to Sophal and his family's future.</p>
+        <img src="img/sophal_monk.png"/ class="imgcenter">
+      </div>
+  </section>
+
+
+
+  <section class="panel chalkboard">
+      <div class="standard">
+        <p>The only private schools they can afford are money factories - only slightly better than the public school.  The neighbor boy attended one of those schools for 3 years and still could not pass the Grade 6 government exam.  But he sure had a nice uniform.</p>
+        <img src="img/sophal_moneyfactory.png" class="imgcenter">
+      </div>
+  </section>
+
+
+
+  <section class="panel light">
+      <div class="dark">
+        <p>Sophal’s parents imagine a private school that is affordable; has qualified, caring teachers; safe facilities, and a quality curriculum.  But it is hard to be hopeful. Such a school doesn’t seem to exist in Cambodia.</p>
+        <img src="img/sophal_education.png"/ class="imgcenter">
+      </div>
+  </section>
+
+  <section class="panel eggshell">
+      <div class="dark">
+        <p>
+          Actually there is one such school - Asian Hope International School.  Here, Sophal can receive what the vast majority of children in his economic status are deprived of: a new formula for hope.</p>
+          <p>Education plus Jesus equals HOPE - for today, tomorrow, and eternity!
+        </p>
+
+        <p style="text-align:center">
+          <a href="middleclass.html">Learn more about the middle-class in Cambodia.</a>
+        </p>
+      </div>
+
+  </section>
+
+  <section class="panel white">
+      <div class="dark">
+          <img src="img/AHIS.png" class="imgcenter">
+
+        <div style="text-align:center;">
+          <p>
+            <a href="index.html">Read Sophal's Story</a>
+          </p>
+          <p>
+            <a href="middleclass.html">Learn more about the middle-class in Cambodia.</a>
+          </p>
+          <p>
+            <a href="now.html">See where Asian Hope School is today and where we're going from here.</a>
+          </p>
+          <p>
+            <a href="next.html">See how you can help.</a>
+          </p>
+        </div>
+      </div>
+  </section>
 
 
 
@@ -124,6 +249,7 @@
   <script src="js/jquery.textillate.js"></script>
   <script src="lib/lightbox2-master/dist/js/lightbox.min.js"></script>
   <script type="text/javascript" src="lib/jquerysvg/jquery.svg.js"></script>
+  <script type="text/javascript" src="lib/jquerysvg/jquery.svgdom.js"></script>
 
   <script>
 
@@ -175,10 +301,10 @@
   };
 
   console.log('here we go!')
-  var MOTONUMBER = 15;
-  var CARNUMBER = 2;
-  var MOTOVOFFSET = 30;
-  var CARVOFFSET = 30;
+  var MOTONUMBER = 20;
+  var CARNUMBER = 5;
+  var MOTOVOFFSET = 35;
+  var CARVOFFSET = 82;
   var MOTOSPEED = 8;
 
 
@@ -186,7 +312,7 @@
     for(i=0; i<MOTONUMBER; i++){
         random_top_offset =  Math.floor(Math.random()*5)-5+MOTOVOFFSET;
         random_horiz_offset = Math.floor(Math.random()*40)+100;
-        random_speed = Math.floor(Math.random()*MOTOSPEED)+2;
+        random_speed = (Math.random()*MOTOSPEED)+2;
         var newmoto = $('#moto_town').append('<div class="randommoto moto_right" style="animation-duration: '+random_speed+'s; top:'+random_top_offset+'vh; left:-'+random_horiz_offset+'vw;"></div>');
     };
     //motos going left
@@ -220,23 +346,70 @@
           $(this).svg({loadURL:'img/randomcar.svg',changeSize: true});
       });
 
+      //sleeping slide
+      $('#sophal-sleeping').svg({loadURL:'img/sophal-sleeping.svg',changeSize:true});
+
+      function toggleEyes() {
+        negation = {'inline':'none',
+                    'none':'inline'};
+
+        eyes_open = document.getElementById('eyes_open');
+        eyes_closed = document.getElementById('eyes_closed');
+
+        eyes_closed.style['display'] = eyes_open.style['display'];
+        eyes_open.style['display'] = negation[eyes_open.style['display']];
+      }
 
 
-  // var a = document.getElementById("alphasvg");
-  // var i = document.getElementById('injectiontest');
-  //
-  //       //it's important to add an load event listener to the object, as it will load the svg doc asynchronously
-  //       a.addEventListener("load",function(){
-  //         var svgDoc = a.contentDocument; //get the inner DOM of alpha.svg
-  //       console.log($('#alphasvg').html());
-  //       $('.randommoto').load('img/motosvg.svg');
-  //         i.contentDocument = svgDoc
-  //         var delta = svgDoc.getElementById("helmet"); //get the inner element by id
-  //         delta.setAttribute('style','fill:#0000FF');
-  //         var delta = svgDoc.getElementById("moto_body"); //get the inner element by id
-  //         delta.setAttribute('style','fill:#0000FF');
-  //         //console.log(delta)
-  //       },false);
+      setInterval(toggleEyes,2000);
+
+      //sandals
+      $('#sandal_town').append('<div class="randomsandal sandal"></div>');
+      $('#sandal_town').append('<div class="randomsandal sandal" style="animation-delay: 2s; transform: rotateZ(200deg);"></div>');
+      $('#sandal_town').append('<div class="randomsandal sandal" style="animation-delay: 4s;"></div>');
+      $('#sandal_town').append('<div class="randomsandal sandal" style="animation-delay: 6s; transform: rotateZ(270deg);"></div>');
+      $('.randomsandal').each(function(){
+          $(this).svg({loadURL:'img/sandal.svg',changeSize: true});
+      });
+
+      // //noodles
+      // $('#sophal-noodles').svg({loadURL:'img/sophal-noodles.svg',changeSize:true});
+      // noodle_hand = document.getElementById('noodle_hand');
+      // noodle_hand.style.transform='translate(-75px,190px)';
+      // noodle = setInterval(noodles_down,25);
+      //
+      //
+      // function noodles_down(){
+      //   noodle_hand = document.getElementById('noodle_hand');
+      //   y_pos = noodle_hand.style.transform.split(',')[1].split('px')[0].trim();
+      //
+      //     if(y_pos<240){
+      //       y_pos++;
+      //       noodle_hand.setAttribute('style','transform: translate(-75px,'+y_pos+'px);');
+      //     }
+      //
+      //     if(y_pos>=240){
+      //       clearInterval(noodle)
+      //       noodle = setInterval(noodles_up, 25);
+      //     }
+      //   }
+      //
+      //   function noodles_up(){
+      //     noodle_hand = document.getElementById('noodle_hand');
+      //     y_pos = noodle_hand.style.transform.split(',')[1].split('px')[0].trim();
+      //
+      //       if(y_pos>190){
+      //         y_pos--;
+      //         noodle_hand.setAttribute('style','transform: translate(-75px,'+y_pos+'px);');
+      //       }
+      //
+      //       if(y_pos<=190){
+      //         clearInterval(noodle)
+      //         noodle = setInterval(noodles_down, 25);
+      //       }
+      //     }
+
+
   </script>
 </body>
 

@@ -9,12 +9,12 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="744.09448819"
-   height="1052.3622047"
+   width="326.1514"
+   height="132.5"
    id="svg9947"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="2cars.svg">
+   sodipodi:docname="randomcar.svg">
   <defs
      id="defs9949" />
   <sodipodi:namedview
@@ -24,17 +24,21 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.959798"
-     inkscape:cx="368.16722"
-     inkscape:cy="517.99026"
+     inkscape:zoom="0.70000001"
+     inkscape:cx="493.5079"
+     inkscape:cy="-30.44674"
      inkscape:document-units="px"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="van"
      showgrid="false"
      inkscape:window-width="1920"
      inkscape:window-height="1056"
      inkscape:window-x="0"
      inkscape:window-y="24"
-     inkscape:window-maximized="1" />
+     inkscape:window-maximized="1"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
   <metadata
      id="metadata9952">
     <rdf:RDF>
@@ -50,7 +54,7 @@
      inkscape:label="economy_car"
      inkscape:groupmode="layer"
      id="economy_car"
-     >
+     transform="translate(-230.5543,-464.7123)">
     <path
        style="fill:#ffc808"
        inkscape:connector-curvature="0"
@@ -166,7 +170,7 @@
      inkscape:groupmode="layer"
      id="suv"
      inkscape:label="suv"
-     >
+     transform="translate(-230.5543,-464.7123)">
     <path
        class="st39 body_color_one"
        d="m 508.4204,493.7123 c 0,0 -2.4,-17.6 -15.8,-17.6 -13.4,0 -107.7,0 -115.5,0 -5,0 -8.8,-0.9 -15.9,8.3 -9.7,12.5 -22.3,26.7 -22.3,26.7 0,0 -49.2,6.4 -63.5,12.8 -9.8,4.4 -11.6,17.4 -11.6,28.8 0,16.5 11.8,15.4 11.8,15.4 0,0 166.7,0 223.8,0 4.9,0 15.8,0.9 15.8,-9.5 -0.1,-10.3 -6.8,-64.9 -6.8,-64.9 z"
@@ -276,7 +280,7 @@
      inkscape:groupmode="layer"
      id="sedan_one"
      inkscape:label="sedan_one"
-     >
+     transform="translate(-230.5543,-464.7123)">
     <path
        style="fill:#f7f07f"
        inkscape:connector-curvature="0"
@@ -385,7 +389,8 @@
   <g
      inkscape:groupmode="layer"
      id="sedan_two"
-     inkscape:label="economy_two">
+     inkscape:label="economy_two"
+     transform="translate(-230.5543,-464.7123)">
     <path
        style="fill:#f7f07f"
        inkscape:connector-curvature="0"
@@ -495,7 +500,7 @@
      inkscape:groupmode="layer"
      id="van"
      inkscape:label="van_layer"
-     >
+     transform="translate(-230.5543,-464.7123)">
     <path
        style="fill:#ed7823"
        inkscape:connector-curvature="0"
@@ -607,12 +612,12 @@
        class="st44 body_color_two"
        inkscape:label="#body_color_two" />
   </g>
-  <script>
-      <![CDATA[
+  <script
+     id="script21346">
       function getRandomColor() {
         var letters = '0123456789ABCDEF'.split('');
         var color = '#';
-        for (var i = 0; i < 6; i++ ) {
+        for (var i = 0; i &lt; 6; i++ ) {
             color += letters[Math.floor(Math.random() * 16)];
         }
         return color;
@@ -629,12 +634,12 @@
 
         /* remove it from the array */
         index = cars.indexOf(car);
-        if(index > -1){
+        if(index &gt; -1){
           cars.splice(index,1);
         }
 
         /* hide all the other elements */
-        for(i = 0; i<cars.length; i++){
+        for(i = 0; i&lt;cars.length; i++){
           currentcar = document.getElementById(cars[i]);
           currentcar.setAttribute('style','display:none');
           currentcar.id = currentcar.id+randomizer;
@@ -642,7 +647,7 @@
 
         primary_colors = document.getElementsByClassName('body_color_one');
 
-        for(i=0;i<primary_colors.length;i++){
+        for(i=0;i&lt;primary_colors.length;i++){
           primary = getRandomColor();
           primary_colors[i].setAttribute('style','fill:'+primary+';');
           primary_colors[i].id = primary_colors[i].id+primary;
@@ -651,10 +656,9 @@
 
         secondary_colors = document.getElementsByClassName('body_color_two');
         secondary = getRandomColor();
-        for(i=0;i<secondary_colors.length;i++){
+        for(i=0;i&lt;secondary_colors.length;i++){
           secondary_colors[i].setAttribute('style','fill:'+secondary+';');
           secondary_colors[i].id = secondary_colors[i].id+secondary;
         }
-      ]]>
-  </script>
+      </script>
 </svg>

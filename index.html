@@ -1,34 +1,163 @@
 <!DOCTYPE HTML>
 <html>
-  <meta charset="utf-8">
+<meta charset="utf-8">
+
 <link href='http://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="lib/font-awesome-4.6.1/css/font-awesome.min.css">
+<link href="lib/lightbox2-master/dist/css/lightbox.css" rel="stylesheet">
 <link rel="stylesheet" href="css/basic.css" type="text/css">
-<body>
+<link rel="stylesheet" type="text/css" href="lib/jquerysvg/jquery.svg.css">
+<style>
+.randommoto,.randomcar,.randomsandal{
+  height: 100px;
+  width: 100px;
+}
+.moto1 {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    left: 100px;
+    animation-name: example;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+.moto_left {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 200vw;
+    animation-name: left;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    z-index: 5;
+}
+.moto_right {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: -200vw;
+    animation-name: right;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transform: rotateY(180deg);
+}
+.car_left {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 200vw;
+    animation-name: left;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    z-index: 5;
+}
+.car_right {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: -200vw;
+    animation-name: right;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transform: rotateY(180deg);
+}
+#sophal-sleeping{
+  margin-left:auto;
+  margin-right:auto;
+  width: 188px;
+}
+#sophal-noodles{
+  margin-left:auto;
+  margin-right:auto;
+  width: 350px;
+}
+#eyes_open{
+  animation-name: eyes;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+#eyes_closed{
+  animation-name: eyelids;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+#moto_town{
+  overflow-x: hidden;
+  width: 100%;
+}
+#sandal_town{
+  width: 100%
+}
+.sandal{  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 200vw;
+  animation-name: sandal;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  z-index: 5;}
+@keyframes left {
+    from {}
+    to {transform: translateX(-220vw);}
+}
+@keyframes right {
+    from {}
+    to {transform: translateX(220vw) rotateY(180deg);}
+}
+@keyframes eyes {
+  from {display: none;}
+  to {display: inline;}
+}
+@keyframes eyelids {
+  from {display: inline;}
+  to {display: none;}
+}
+@keyframes sandal{
+  30%{transform: translateX(-170vw) rotateZ(-360deg);}
+  50%{transform: translateX(-170vw) rotateZ(-360deg);}
+  75%{transform: translateX(-220vw) rotateZ(720deg);}
+  100%{transform: translateX(-250vw); }
 
+}
+
+
+</style>
+<body>
   <section class="panel grey">
     <div class="standard">
-      <h1 style="text-align:center">Sophal's Story</h1>
+      <h1 style="text-align:center; line-height: 75%;">Sophal's Story</h1>
       <p>Rubbing the sleep from his eyes, Sophal stands up from his foam mat and stretches long and tall. It was a typical night sleep - fitful due to the heat, dogs barking and street noises.</p>
-      <img src="img/sophal_mat.png" class="imgcenter">
+      <div id="sophal-sleeping" class="imgcenter"></div>
     </div>
   </section>
-  <section class="panel skin">
+  <section class="panel skin" style="background-color:#678D9F;">
     <div class="standard">
       <p>He makes his way to that familiar spot on the floor where his grandmother hands him a bowl of noodle soup with a small piece of pork in it. He quickly slurps down the broth, pulls on a dingy white uniform shirt, slips on his flip flops, and begins the dusty walk to school.</p>
-      <img src="img/sophal_noodles.png"/>
+      <img src='img/sophal-noodles.gif' class="imgcenter" style="width: 40vw; max-width: 33%;"/>
+      <!-- <div id="sophal-noodles" class="imgcenter"/> -->
     </div>
   </section>
-  <section class="panel turqoise city">
-    <div class="standard">
+
+    <section class="panel blue" style="overflow-x: hidden;">
+      <div class="standard">
+      <img class="imgcenter" src="img/sophal_export.png"/ style="height: 10vh; z-index:5;">
       <p>The streets are an obstacle course of trucks, motorcycles, bicycles, cows, dogs, and kids. Boy, he wishes he could buy some of the grilled pork and rice from his favorite food cart.</p>
+
+
+      <div id="moto_town">
+
+      </div>
+
     </div>
   </section>
-  <section class="panel green">
+
+  <section class="panel green" style="overflow-x: hidden;">
     <div class="standard">
       <p>Sophal likes to get to school early. There is no playground on the campus of dirt and trash. He and his buddies play gambling games. Today is the sandal game but no money is involved. They need their money for the teacher.</p>
-      <img src="img/sophal_sandals.png"/ class="imgcenter">
+      <div id="sandal_town">
+
+      </div>
     </div>
   </section>
   <section class="panel salmon">
@@ -112,44 +241,176 @@
   <script src="js/TweenMax.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-   <script src="js/animation.gsap.min.js"></script>
+  <script src="js/animation.gsap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
   <script src="js/assets/jquery.fittext.js"></script>
   <script src="js/assets/jquery.lettering.js"></script>
   <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
   <script src="js/jquery.textillate.js"></script>
+  <script src="lib/lightbox2-master/dist/js/lightbox.min.js"></script>
+  <script type="text/javascript" src="lib/jquerysvg/jquery.svg.js"></script>
+  <script type="text/javascript" src="lib/jquerysvg/jquery.svgdom.js"></script>
 
   <script>
-  $(function () { // wait for document ready
-		// init
-		var controller = new ScrollMagic.Controller({
-			globalSceneOptions: {
-				triggerHook: 'onLeave'
-			}
 
-		});
-		// get all slides
-		var slides = document.querySelectorAll("section.panel");
 
-		// create scene for every slide
-		for (var i=0; i<slides.length; i++) {
-			new ScrollMagic.Scene({
-					triggerElement: slides[i]
-				})
-				.setPin(slides[i])
-				.addTo(controller);
-		}
-	});
+    $(function() { // wait for document ready
+      // init
+      var controller = new ScrollMagic.Controller({
+        globalSceneOptions: {
+          triggerHook: 'onLeave'
+        }
+
+      });
+      // get all slides
+      var slides = document.querySelectorAll("section.panel");
+
+      // create scene for every slide
+      for (var i = 0; i < slides.length; i++) {
+        new ScrollMagic.Scene({
+            triggerElement: slides[i]
+          })
+          .setPin(slides[i])
+          .addTo(controller);
+      }
+
+
+    });
+    $('input[name="thechoice"]').bind('change',function(){
+      var showOrHide = ($(this).val() == 1) ? true : false;
+      $('#donate_form').toggle(showOrHide);
+      $('#contact_form').toggle(showOrHide);
+    });
+
+    $('#yes').change(function(){
+        $('#donate_form').slideDown();
+    });
+    $('#no').change(function(){
+        $('#contact_form').slideDown();
+    });
+
   </script>
-  <!-- Start of Async HubSpot Analytics Code -->
-  <script type="text/javascript">
-    (function(d,s,i,r) {
-      if (d.getElementById(i)){return;}
-      var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
-      n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/2039092.js';
-      e.parentNode.insertBefore(n, e);
-    })(document,"script","hs-analytics",300000);
+  <script>
+  function getRandomColor() {
+    var letters = '0123456789ABCDEF'.split('');
+    var color = '#';
+    for (var i = 0; i < 6; i++ ) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  };
+
+  console.log('here we go!')
+  var MOTONUMBER = 20;
+  var CARNUMBER = 5;
+  var MOTOVOFFSET = 35;
+  var CARVOFFSET = 82;
+  var MOTOSPEED = 8;
+
+
+    //motos going right
+    for(i=0; i<MOTONUMBER; i++){
+        random_top_offset =  Math.floor(Math.random()*5)-5+MOTOVOFFSET;
+        random_horiz_offset = Math.floor(Math.random()*40)+100;
+        random_speed = (Math.random()*MOTOSPEED)+2;
+        var newmoto = $('#moto_town').append('<div class="randommoto moto_right" style="animation-duration: '+random_speed+'s; top:'+random_top_offset+'vh; left:-'+random_horiz_offset+'vw;"></div>');
+    };
+    //motos going left
+      for(i=0; i<MOTONUMBER; i++){
+          random_top_offset =  Math.floor(Math.random()*5)+5+MOTOVOFFSET;
+          random_horiz_offset = Math.floor(Math.random()*40)+100;
+          random_speed = Math.floor(Math.random()*MOTOSPEED)+2;
+          var newmoto = $('#moto_town').append('<div class="randommoto moto_left" style="animation-duration: '+random_speed+'s; top:'+random_top_offset+'vh; left:'+random_horiz_offset+'vw; z-index: '+random_top_offset+';"></div>');
+      };
+    $('.randommoto').each(function(){
+      $(this).svg({loadURL:'img/motosvgtest.svg',changeSize: true});
+    //  $(this).svg({loadURL:'img/randomcar.svg',changeSize: true});
+    });
+
+    //cars going left
+      for(i=0; i<CARNUMBER; i++){
+          random_top_offset =  Math.floor(Math.random()*5)-50+CARVOFFSET;
+          random_horiz_offset = Math.floor(Math.random()*40)+100;
+          random_speed = Math.floor(Math.random()*10)+2;
+          var newmoto = $('#moto_town').append('<div class="randomcar car_left" style="animation-duration: '+random_speed+'s; top:'+random_top_offset+'vh; left:'+random_horiz_offset+'vw;"></div>');
+      };
+
+      //cars going right
+      for(i=0; i<CARNUMBER; i++){
+          random_top_offset =  Math.floor(Math.random()*5)-55+CARVOFFSET;
+          random_horiz_offset = Math.floor(Math.random()*40)+100;
+          random_speed = Math.floor(Math.random()*10)+2;
+          var newmoto = $('#moto_town').append('<div class="randomcar car_right" style="animation-duration: '+random_speed+'s; top:'+random_top_offset+'vh; left:-'+random_horiz_offset+'vw;"></div>');
+      };
+      $('.randomcar').each(function(){
+          $(this).svg({loadURL:'img/randomcar.svg',changeSize: true});
+      });
+
+      //sleeping slide
+      $('#sophal-sleeping').svg({loadURL:'img/sophal-sleeping.svg',changeSize:true});
+
+      function toggleEyes() {
+        negation = {'inline':'none',
+                    'none':'inline'};
+
+        eyes_open = document.getElementById('eyes_open');
+        eyes_closed = document.getElementById('eyes_closed');
+
+        eyes_closed.style['display'] = eyes_open.style['display'];
+        eyes_open.style['display'] = negation[eyes_open.style['display']];
+      }
+
+
+      setInterval(toggleEyes,2000);
+
+      //sandals
+      $('#sandal_town').append('<div class="randomsandal sandal"></div>');
+      $('#sandal_town').append('<div class="randomsandal sandal" style="animation-delay: 2s; transform: rotateZ(200deg);"></div>');
+      $('#sandal_town').append('<div class="randomsandal sandal" style="animation-delay: 4s;"></div>');
+      $('#sandal_town').append('<div class="randomsandal sandal" style="animation-delay: 6s; transform: rotateZ(270deg);"></div>');
+      $('.randomsandal').each(function(){
+          $(this).svg({loadURL:'img/sandal.svg',changeSize: true});
+      });
+
+      // //noodles
+      // $('#sophal-noodles').svg({loadURL:'img/sophal-noodles.svg',changeSize:true});
+      // noodle_hand = document.getElementById('noodle_hand');
+      // noodle_hand.style.transform='translate(-75px,190px)';
+      // noodle = setInterval(noodles_down,25);
+      //
+      //
+      // function noodles_down(){
+      //   noodle_hand = document.getElementById('noodle_hand');
+      //   y_pos = noodle_hand.style.transform.split(',')[1].split('px')[0].trim();
+      //
+      //     if(y_pos<240){
+      //       y_pos++;
+      //       noodle_hand.setAttribute('style','transform: translate(-75px,'+y_pos+'px);');
+      //     }
+      //
+      //     if(y_pos>=240){
+      //       clearInterval(noodle)
+      //       noodle = setInterval(noodles_up, 25);
+      //     }
+      //   }
+      //
+      //   function noodles_up(){
+      //     noodle_hand = document.getElementById('noodle_hand');
+      //     y_pos = noodle_hand.style.transform.split(',')[1].split('px')[0].trim();
+      //
+      //       if(y_pos>190){
+      //         y_pos--;
+      //         noodle_hand.setAttribute('style','transform: translate(-75px,'+y_pos+'px);');
+      //       }
+      //
+      //       if(y_pos<=190){
+      //         clearInterval(noodle)
+      //         noodle = setInterval(noodles_down, 25);
+      //       }
+      //     }
+
+
   </script>
-<!-- End of Async HubSpot Analytics Code -->
 </body>
+
 </html>

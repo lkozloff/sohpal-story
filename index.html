@@ -94,7 +94,7 @@
   position: absolute;
   left: 200vw;
   animation-name: sandal;
-  animation-duration: 8s;
+  animation-duration: 16s;
   animation-iteration-count: infinite;
   z-index: 5;}
 @keyframes left {
@@ -365,9 +365,9 @@
 
       //sandals
       $('#sandal_town').append('<div class="randomsandal sandal"></div>');
-      $('#sandal_town').append('<div class="randomsandal sandal" style="animation-delay: 2s; transform: rotateZ(200deg);"></div>');
-      $('#sandal_town').append('<div class="randomsandal sandal" style="animation-delay: 4s;"></div>');
-      $('#sandal_town').append('<div class="randomsandal sandal" style="animation-delay: 6s; transform: rotateZ(270deg);"></div>');
+      $('#sandal_town').append('<div class="randomsandal sandal" style="animation-delay: 4s; transform: rotateZ(200deg);"></div>');
+      $('#sandal_town').append('<div class="randomsandal sandal" style="animation-delay: 8s;"></div>');
+      $('#sandal_town').append('<div class="randomsandal sandal" style="animation-delay: 12s; transform: rotateZ(270deg);"></div>');
       $('.randomsandal').each(function(){
           $(this).svg({loadURL:'img/sandal.svg',changeSize: true});
       });

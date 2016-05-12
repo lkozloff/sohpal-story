@@ -1,4 +1,9 @@
 @media (min-width: 330px) {
+  td{
+    padding: 0;
+    line-height: 80%;
+  }
+
   h1 {
     font-size: 5.5vh;
     margin: 0;
@@ -109,7 +114,7 @@
 
 a {
   font-family: "Roboto";
-  font-weight: 300;
+  font-weight: 400;
   text-decoration: none;
   color: #00A323;
 }
@@ -120,7 +125,7 @@ a:hover {
 
 .whitelinks a{
     font-family: "Roboto";
-    font-weight: 300;
+    font-weight: 400;
     text-decoration: none;
     color: white;
 }
